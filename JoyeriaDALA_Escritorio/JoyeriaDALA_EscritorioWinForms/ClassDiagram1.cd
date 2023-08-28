@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="JoyeriaDALA_EscritorioWinForms.Modelo.Encargo">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAFAAEAgAAAAEAAAAAggAAEAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Modelo\Encargo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JoyeriaDALA_EscritorioWinForms.Modelo.Factura">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAFCCAAAAAAAAACgEAAQAIAEAQAAAAAAAA=</HashCode>
+      <FileName>Modelo\Factura.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JoyeriaDALA_EscritorioWinForms.Modelo.Grabado">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAFAAEAAAAAAAAAAAAAgAAUAgAAAAQAAAgAAA=</HashCode>
+      <FileName>Modelo\Grabado.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JoyeriaDALA_EscritorioWinForms.Modelo.Venta">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAQAAAAAAAQAQAAAAAAAAAEAgAAEAAAAAAAAA=</HashCode>
+      <FileName>Modelo\Venta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JoyeriaDALA_EscritorioWinForms.Negocio">
+    <Position X="14.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAABAAAAgAAAAAAIBAAAAAAAAAIEAAAAAAQIAAAAIA=</HashCode>
+      <FileName>Negocio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JoyeriaDALA_EscritorioWinForms.Herramientas">
+    <Position X="16.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CCQCgAACAQQIggBrAgACABQCKoAgkgEKICwAIgAoAAo=</HashCode>
+      <FileName>Herramientas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JoyeriaDALA_EscritorioWinForms.GlobalValues">
+    <Position X="14.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAoAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GlobalValues.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JoyeriaDALA_EscritorioWinForms.FacturasManager">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABgAEADAAAIAAQkAgAAAAAABAAAAAACAAAIAAAE=</HashCode>
+      <FileName>FacturasManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JoyeriaDALA_EscritorioWinForms.Modelo.TipoProducto">
+    <Position X="5.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Modelo\TipoProducto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JoyeriaDALA_EscritorioWinForms.Modelo.Producto">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAwBACAAEEAAAAAAAAAEIAAAAAAYABAAAA=</HashCode>
+      <FileName>Modelo\Producto.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JoyeriaDALA_EscritorioWinForms.Modelo.Notificacion">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAABAAAAAAAAAAAAAACAAAAAAAEAAAAECAAEAAAAAA=</HashCode>
+      <FileName>Modelo\Notificacion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JoyeriaDALA_EscritorioWinForms.Modelo.Preferencia">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAiABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Modelo\Preferencia.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JoyeriaDALA_EscritorioWinForms.Modelo.ItemFactura">
+    <Position X="7.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQBAEQAAAAAQAAAAEAAAABAAAAAAAAAEACAAAAAAA=</HashCode>
+      <FileName>Modelo\ItemFactura.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JoyeriaDALA_EscritorioWinForms.Modelo.ProductosVenta">
+    <Position X="4" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ARAAACAAAAAQQACAAAAAAAAAAAAAAAoAAAAAAAAAAAA=</HashCode>
+      <FileName>Modelo\ProductosVenta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JoyeriaDALA_EscritorioWinForms.Reports.ClienteWr">
+    <Position X="9.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACQAAAAAAAAAAgAAAAAAAAAAgAAAAI=</HashCode>
+      <FileName>Reports\ClienteWr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JoyeriaDALA_EscritorioWinForms.Reports.PropietarioWr">
+    <Position X="11" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAgAAAAI=</HashCode>
+      <FileName>Reports\PropietarioWr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

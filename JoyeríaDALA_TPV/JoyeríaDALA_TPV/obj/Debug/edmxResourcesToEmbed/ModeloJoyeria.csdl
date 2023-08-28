@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="JoyeriaDB" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="C__EFMigrationsHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+    </Key>
+    <Property Name="MigrationId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProductVersion" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Encargo">
+    <Key>
+      <PropertyRef Name="IdEncargo" />
+    </Key>
+    <Property Name="IdEncargo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="cliente" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FechaInicio" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="FechaFin" Type="DateTime" Precision="7" />
+    <Property Name="precio" Type="Double" />
+    <Property Name="terminada" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Productoes" Relationship="Self.FK_Producto_Encargo_EncargoIdEncargo" FromRole="Encargo" ToRole="Producto" />
+  </EntityType>
+  <EntityType Name="Factura">
+    <Key>
+      <PropertyRef Name="idFactura" />
+    </Key>
+    <Property Name="idFactura" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fechaFactura" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="IdAsociado" Type="Int32" Nullable="false" />
+    <Property Name="TipoAsociado" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="precioTotal" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Grabado">
+    <Key>
+      <PropertyRef Name="IdGrabado" />
+    </Key>
+    <Property Name="IdGrabado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="contenido" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="productoidProducto" Type="Int32" />
+    <Property Name="FechaFin" Type="DateTime" Precision="7" />
+    <Property Name="FechaInicio" Type="DateTime" Nullable="false" Precision="7" />
+    <Property Name="nombreCliente" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="precio" Type="Double" />
+    <Property Name="terminado" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Producto" Relationship="Self.FK_Grabado_Producto_productoidProducto" FromRole="Grabado" ToRole="Producto" />
+  </EntityType>
+  <EntityType Name="Producto">
+    <Key>
+      <PropertyRef Name="idProducto" />
+    </Key>
+    <Property Name="idProducto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tipoProducto" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="precio" Type="Double" />
+    <Property Name="descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="material" Type="Int32" />
+    <Property Name="tamano" Type="Int32" />
+    <Property Name="EncargoIdEncargo" Type="Int32" />
+    <Property Name="VentaIdVenta" Type="Int32" />
+    <NavigationProperty Name="Encargo" Relationship="Self.FK_Producto_Encargo_EncargoIdEncargo" FromRole="Producto" ToRole="Encargo" />
+    <NavigationProperty Name="Grabadoes" Relationship="Self.FK_Grabado_Producto_productoidProducto" FromRole="Producto" ToRole="Grabado" />
+    <NavigationProperty Name="Venta" Relationship="Self.FK_Producto_Venta_VentaIdVenta" FromRole="Producto" ToRole="Venta" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Venta">
+    <Key>
+      <PropertyRef Name="IdVenta" />
+    </Key>
+    <Property Name="IdVenta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="precio" Type="Double" Nullable="false" />
+    <Property Name="observaciones" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FechaVenta" Type="DateTime" Nullable="false" Precision="7" />
+    <NavigationProperty Name="Productoes" Relationship="Self.FK_Producto_Venta_VentaIdVenta" FromRole="Venta" ToRole="Producto" />
+  </EntityType>
+  <Association Name="FK_Producto_Encargo_EncargoIdEncargo">
+    <End Role="Encargo" Type="Self.Encargo" Multiplicity="0..1" />
+    <End Role="Producto" Type="Self.Producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Encargo">
+        <PropertyRef Name="IdEncargo" />
+      </Principal>
+      <Dependent Role="Producto">
+        <PropertyRef Name="EncargoIdEncargo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Grabado_Producto_productoidProducto">
+    <End Role="Producto" Type="Self.Producto" Multiplicity="0..1" />
+    <End Role="Grabado" Type="Self.Grabado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Producto">
+        <PropertyRef Name="idProducto" />
+      </Principal>
+      <Dependent Role="Grabado">
+        <PropertyRef Name="productoidProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Producto_Venta_VentaIdVenta">
+    <End Role="Venta" Type="Self.Venta" Multiplicity="0..1" />
+    <End Role="Producto" Type="Self.Producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Venta">
+        <PropertyRef Name="IdVenta" />
+      </Principal>
+      <Dependent Role="Producto">
+        <PropertyRef Name="VentaIdVenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DALA_DB" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C__EFMigrationsHistory" EntityType="Self.C__EFMigrationsHistory" />
+    <EntitySet Name="Encargoes" EntityType="Self.Encargo" />
+    <EntitySet Name="Facturas" EntityType="Self.Factura" />
+    <EntitySet Name="Grabadoes" EntityType="Self.Grabado" />
+    <EntitySet Name="Productoes" EntityType="Self.Producto" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="Ventas" EntityType="Self.Venta" />
+    <AssociationSet Name="FK_Producto_Encargo_EncargoIdEncargo" Association="Self.FK_Producto_Encargo_EncargoIdEncargo">
+      <End Role="Encargo" EntitySet="Encargoes" />
+      <End Role="Producto" EntitySet="Productoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Grabado_Producto_productoidProducto" Association="Self.FK_Grabado_Producto_productoidProducto">
+      <End Role="Producto" EntitySet="Productoes" />
+      <End Role="Grabado" EntitySet="Grabadoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Producto_Venta_VentaIdVenta" Association="Self.FK_Producto_Venta_VentaIdVenta">
+      <End Role="Venta" EntitySet="Ventas" />
+      <End Role="Producto" EntitySet="Productoes" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>DESKTOP-61JCH03</Machine>
+    <WindowsUser>Usuario</WindowsUser>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetOsVersion>10.0</TargetOsVersion>
+    <TargetOsDescription>Windows 10.0</TargetOsDescription>
+    <SolutionConfiguration>Release|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>1ddb4902-8d79-4c44-bae8-46b22ff7bfab</PackageIdentityName>
+    <PackageIdentityPublisher>CN=Usuario</PackageIdentityPublisher>
+    <IntermediateOutputPath>D:\%280%29TFG\JoyeríaDALA_TPV\Instalador\obj\Release\</IntermediateOutputPath>
+    <RemoteDeploymentType></RemoteDeploymentType>
+    <PackageRegistrationPath></PackageRegistrationPath>
+    <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
+    <DeployOptionalPackages>false</DeployOptionalPackages>
+    <WindowsSdkPath></WindowsSdkPath>
+    <LayoutDir>D:\%280%29TFG\JoyeríaDALA_TPV\Instalador\bin\AnyCPU\Release\AppX</LayoutDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="D:\%280%29TFG\JoyeríaDALA_TPV\Instalador\bin\AnyCPU\Release\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\Instalador\Images\SplashScreen.scale-200.png">
+      <PackagePath>Images\SplashScreen.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\Instalador\Images\LockScreenLogo.scale-200.png">
+      <PackagePath>Images\LockScreenLogo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\Instalador\Images\Square150x150Logo.scale-200.png">
+      <PackagePath>Images\Square150x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\Instalador\Images\Square44x44Logo.scale-200.png">
+      <PackagePath>Images\Square44x44Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\Instalador\Images\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <PackagePath>Images\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\Instalador\Images\StoreLogo.png">
+      <PackagePath>Images\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\Instalador\Images\Wide310x150Logo.scale-200.png">
+      <PackagePath>Images\Wide310x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\Instalador\bin\AnyCPU\Release\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll">
+      <PackagePath>JoyeríaDALA_TPV\EntityFramework.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll">
+      <PackagePath>JoyeríaDALA_TPV\EntityFramework.SqlServer.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.Common.dll">
+      <PackagePath>JoyeríaDALA_TPV\Microsoft.ReportViewer.Common.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll">
+      <PackagePath>JoyeríaDALA_TPV\Microsoft.ReportViewer.DataVisualization.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.Design.dll">
+      <PackagePath>JoyeríaDALA_TPV\Microsoft.ReportViewer.Design.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll">
+      <PackagePath>JoyeríaDALA_TPV\Microsoft.ReportViewer.ProcessingObjectModel.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\Microsoft.ReportViewer.WinForms.dll">
+      <PackagePath>JoyeríaDALA_TPV\Microsoft.ReportViewer.WinForms.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll">
+      <PackagePath>JoyeríaDALA_TPV\Microsoft.SqlServer.Types.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll">
+      <PackagePath>JoyeríaDALA_TPV\Newtonsoft.Json.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Common Files\Microsoft Shared\MSEnv\PublicAssemblies\EnvDTE.dll">
+      <PackagePath>JoyeríaDALA_TPV\EnvDTE.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft.NET\Primary Interop Assemblies\stdole.dll">
+      <PackagePath>JoyeríaDALA_TPV\stdole.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\de\Microsoft.ReportViewer.Common.resources.dll">
+      <PackagePath>JoyeríaDALA_TPV\de\Microsoft.ReportViewer.Common.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\es\Microsoft.ReportViewer.Common.resources.dll">
+      <PackagePath>JoyeríaDALA_TPV\es\Microsoft.ReportViewer.Common.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\fr\Microsoft.ReportViewer.Common.resources.dll">
+      <PackagePath>JoyeríaDALA_TPV\fr\Microsoft.ReportViewer.Common.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\it\Microsoft.ReportViewer.Common.resources.dll">
+      <PackagePath>JoyeríaDALA_TPV\it\Microsoft.ReportViewer.Common.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\ja\Microsoft.ReportViewer.Common.resources.dll">
+      <PackagePath>JoyeríaDALA_TPV\ja\Microsoft.ReportViewer.Common.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\ko\Microsoft.ReportViewer.Common.resources.dll">
+      <PackagePath>JoyeríaDALA_TPV\ko\Microsoft.ReportViewer.Common.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\pt\Microsoft.ReportViewer.Common.resources.dll">
+      <PackagePath>JoyeríaDALA_TPV\pt\Microsoft.ReportViewer.Common.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\ru\Microsoft.ReportViewer.Common.resources.dll">
+      <PackagePath>JoyeríaDALA_TPV\ru\Microsoft.ReportViewer.Common.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\zh-CHS\Microsoft.ReportViewer.Common.resources.dll">
+      <PackagePath>JoyeríaDALA_TPV\zh-CHS\Microsoft.ReportViewer.Common.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\zh-CHT\Microsoft.ReportViewer.Common.resources.dll">
+      <PackagePath>JoyeríaDALA_TPV\zh-CHT\Microsoft.ReportViewer.Common.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\de\Microsoft.ReportViewer.DataVisualization.resources.dll">
+      <PackagePath>JoyeríaDALA_TPV\de\Microsoft.ReportViewer.DataVisualization.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\es\Microsoft.ReportViewer.DataVisualization.resources.dll">
+      <PackagePath>JoyeríaDALA_TPV\es\Microsoft.ReportViewer.DataVisualization.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\fr\Microsoft.ReportViewer.DataVisualization.resources.dll">
+      <PackagePath>JoyeríaDALA_TPV\fr\Microsoft.ReportViewer.DataVisualization.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\it\Microsoft.ReportViewer.DataVisualization.resources.dll">
+      <PackagePath>JoyeríaDALA_TPV\it\Microsoft.ReportViewer.DataVisualization.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\ja\Microsoft.ReportViewer.DataVisualization.resources.dll">
+      <PackagePath>JoyeríaDALA_TPV\ja\Microsoft.ReportViewer.DataVisualization.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\ko\Microsoft.ReportViewer.DataVisualization.resources.dll">
+      <PackagePath>JoyeríaDALA_TPV\ko\Microsoft.ReportViewer.DataVisualization.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\pt\Microsoft.ReportViewer.DataVisualization.resources.dll">
+      <PackagePath>JoyeríaDALA_TPV\pt\Microsoft.ReportViewer.DataVisualization.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\ru\Microsoft.ReportViewer.DataVisualization.resources.dll">
+      <PackagePath>JoyeríaDALA_TPV\ru\Microsoft.ReportViewer.DataVisualization.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll">
+      <PackagePath>JoyeríaDALA_TPV\zh-CHS\Microsoft.ReportViewer.DataVisualization.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll">
+      <PackagePath>JoyeríaDALA_TPV\zh-CHT\Microsoft.ReportViewer.DataVisualization.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\de\Microsoft.ReportViewer.Design.resources.dll">
+      <PackagePath>JoyeríaDALA_TPV\de\Microsoft.ReportViewer.Design.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\es\Microsoft.ReportViewer.Design.resources.dll">
+      <PackagePath>JoyeríaDALA_TPV\es\Microsoft.ReportViewer.Design.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\fr\Microsoft.ReportViewer.Design.resources.dll">
+      <PackagePath>JoyeríaDALA_TPV\fr\Microsoft.ReportViewer.Design.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\it\Microsoft.ReportViewer.Design.resources.dll">
+      <PackagePath>JoyeríaDALA_TPV\it\Microsoft.ReportViewer.Design.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\ja\Microsoft.ReportViewer.Design.resources.dll">
+      <PackagePath>JoyeríaDALA_TPV\ja\Microsoft.ReportViewer.Design.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\ko\Microsoft.ReportViewer.Design.resources.dll">
+      <PackagePath>JoyeríaDALA_TPV\ko\Microsoft.ReportViewer.Design.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\pt\Microsoft.ReportViewer.Design.resources.dll">
+      <PackagePath>JoyeríaDALA_TPV\pt\Microsoft.ReportViewer.Design.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\ru\Microsoft.ReportViewer.Design.resources.dll">
+      <PackagePath>JoyeríaDALA_TPV\ru\Microsoft.ReportViewer.Design.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\zh-CHS\Microsoft.ReportViewer.Design.resources.dll">
+      <PackagePath>JoyeríaDALA_TPV\zh-CHS\Microsoft.ReportViewer.Design.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\zh-CHT\Microsoft.ReportViewer.Design.resources.dll">
+      <PackagePath>JoyeríaDALA_TPV\zh-CHT\Microsoft.ReportViewer.Design.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\de\Microsoft.ReportViewer.WinForms.resources.dll">
+      <PackagePath>JoyeríaDALA_TPV\de\Microsoft.ReportViewer.WinForms.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\es\Microsoft.ReportViewer.WinForms.resources.dll">
+      <PackagePath>JoyeríaDALA_TPV\es\Microsoft.ReportViewer.WinForms.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\fr\Microsoft.ReportViewer.WinForms.resources.dll">
+      <PackagePath>JoyeríaDALA_TPV\fr\Microsoft.ReportViewer.WinForms.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\it\Microsoft.ReportViewer.WinForms.resources.dll">
+      <PackagePath>JoyeríaDALA_TPV\it\Microsoft.ReportViewer.WinForms.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\ja\Microsoft.ReportViewer.WinForms.resources.dll">
+      <PackagePath>JoyeríaDALA_TPV\ja\Microsoft.ReportViewer.WinForms.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\ko\Microsoft.ReportViewer.WinForms.resources.dll">
+      <PackagePath>JoyeríaDALA_TPV\ko\Microsoft.ReportViewer.WinForms.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\pt\Microsoft.ReportViewer.WinForms.resources.dll">
+      <PackagePath>JoyeríaDALA_TPV\pt\Microsoft.ReportViewer.WinForms.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\ru\Microsoft.ReportViewer.WinForms.resources.dll">
+      <PackagePath>JoyeríaDALA_TPV\ru\Microsoft.ReportViewer.WinForms.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll">
+      <PackagePath>JoyeríaDALA_TPV\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1586.0\lib\net40\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll">
+      <PackagePath>JoyeríaDALA_TPV\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\JoyeríaDALA_TPV\SqlServerTypes\x64\msvcr120.dll">
+      <PackagePath>JoyeríaDALA_TPV\SqlServerTypes\x64\msvcr120.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\JoyeríaDALA_TPV\SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <PackagePath>JoyeríaDALA_TPV\SqlServerTypes\x64\SqlServerSpatial140.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\JoyeríaDALA_TPV\SqlServerTypes\x86\msvcr120.dll">
+      <PackagePath>JoyeríaDALA_TPV\SqlServerTypes\x86\msvcr120.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\JoyeríaDALA_TPV\SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <PackagePath>JoyeríaDALA_TPV\SqlServerTypes\x86\SqlServerSpatial140.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\JoyeríaDALA_TPV\SqlServerTypes\readme.htm">
+      <PackagePath>JoyeríaDALA_TPV\SqlServerTypes\readme.htm</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\JoyeríaDALA_TPV\bin\Release\JoyeríaDALA_TPV.exe">
+      <PackagePath>JoyeríaDALA_TPV\JoyeríaDALA_TPV.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\%280%29TFG\JoyeríaDALA_TPV\JoyeríaDALA_TPV\bin\Release\JoyeríaDALA_TPV.exe.config">
+      <PackagePath>JoyeríaDALA_TPV\JoyeríaDALA_TPV.exe.config</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

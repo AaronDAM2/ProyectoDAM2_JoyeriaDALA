@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="JoyeriaDBStoreContainer" CdmEntityContainer="DALA_DB">
+    <EntitySetMapping Name="C__EFMigrationsHistory">
+      <EntityTypeMapping TypeName="JoyeriaDB.C__EFMigrationsHistory">
+        <MappingFragment StoreEntitySet="__EFMigrationsHistory">
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Encargoes">
+      <EntityTypeMapping TypeName="JoyeriaDB.Encargo">
+        <MappingFragment StoreEntitySet="Encargo">
+          <ScalarProperty Name="IdEncargo" ColumnName="IdEncargo" />
+          <ScalarProperty Name="cliente" ColumnName="cliente" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+          <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="terminada" ColumnName="terminada" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Facturas">
+      <EntityTypeMapping TypeName="JoyeriaDB.Factura">
+        <MappingFragment StoreEntitySet="Factura">
+          <ScalarProperty Name="idFactura" ColumnName="idFactura" />
+          <ScalarProperty Name="fechaFactura" ColumnName="fechaFactura" />
+          <ScalarProperty Name="IdAsociado" ColumnName="IdAsociado" />
+          <ScalarProperty Name="TipoAsociado" ColumnName="TipoAsociado" />
+          <ScalarProperty Name="precioTotal" ColumnName="precioTotal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Grabadoes">
+      <EntityTypeMapping TypeName="JoyeriaDB.Grabado">
+        <MappingFragment StoreEntitySet="Grabado">
+          <ScalarProperty Name="IdGrabado" ColumnName="IdGrabado" />
+          <ScalarProperty Name="contenido" ColumnName="contenido" />
+          <ScalarProperty Name="productoidProducto" ColumnName="productoidProducto" />
+          <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
+          <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
+          <ScalarProperty Name="nombreCliente" ColumnName="nombreCliente" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="terminado" ColumnName="terminado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Productoes">
+      <EntityTypeMapping TypeName="JoyeriaDB.Producto">
+        <MappingFragment StoreEntitySet="Producto">
+          <ScalarProperty Name="idProducto" ColumnName="idProducto" />
+          <ScalarProperty Name="tipoProducto" ColumnName="tipoProducto" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="material" ColumnName="material" />
+          <ScalarProperty Name="tamano" ColumnName="tamano" />
+          <ScalarProperty Name="EncargoIdEncargo" ColumnName="EncargoIdEncargo" />
+          <ScalarProperty Name="VentaIdVenta" ColumnName="VentaIdVenta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="JoyeriaDB.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ventas">
+      <EntityTypeMapping TypeName="JoyeriaDB.Venta">
+        <MappingFragment StoreEntitySet="Venta">
+          <ScalarProperty Name="IdVenta" ColumnName="IdVenta" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="observaciones" ColumnName="observaciones" />
+          <ScalarProperty Name="FechaVenta" ColumnName="FechaVenta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

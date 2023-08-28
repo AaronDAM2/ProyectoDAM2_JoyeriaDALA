@@ -1,0 +1,2 @@
+MainPackage=D:\(0)TFG\JoyeríaDALA_TPV\Instalador\bin\AnyCPU\Release\Instalador_1.0.0.0_AnyCPU.appx
+SymbolPackage=D:\(0)TFG\JoyeríaDALA_TPV\Instalador\obj\Release\Symbols\Instalador_1.0.0.0_AnyCPU.appxsym

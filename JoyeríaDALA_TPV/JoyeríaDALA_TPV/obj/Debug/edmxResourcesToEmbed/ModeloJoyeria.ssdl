@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="JoyeriaDB.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="__EFMigrationsHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Encargo">
+    <Key>
+      <PropertyRef Name="IdEncargo" />
+    </Key>
+    <Property Name="IdEncargo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="cliente" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="descripcion" Type="nvarchar(max)" />
+    <Property Name="FechaInicio" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="FechaFin" Type="datetime2" Precision="7" />
+    <Property Name="precio" Type="float" />
+    <Property Name="terminada" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Factura">
+    <Key>
+      <PropertyRef Name="idFactura" />
+    </Key>
+    <Property Name="idFactura" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fechaFactura" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="IdAsociado" Type="int" Nullable="false" />
+    <Property Name="TipoAsociado" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="precioTotal" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Grabado">
+    <Key>
+      <PropertyRef Name="IdGrabado" />
+    </Key>
+    <Property Name="IdGrabado" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="contenido" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="productoidProducto" Type="int" />
+    <Property Name="FechaFin" Type="datetime2" Precision="7" />
+    <Property Name="FechaInicio" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="nombreCliente" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="precio" Type="float" />
+    <Property Name="terminado" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Producto">
+    <Key>
+      <PropertyRef Name="idProducto" />
+    </Key>
+    <Property Name="idProducto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tipoProducto" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="nombre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="precio" Type="float" />
+    <Property Name="descripcion" Type="nvarchar(max)" />
+    <Property Name="material" Type="int" />
+    <Property Name="tamano" Type="int" />
+    <Property Name="EncargoIdEncargo" Type="int" />
+    <Property Name="VentaIdVenta" Type="int" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Venta">
+    <Key>
+      <PropertyRef Name="IdVenta" />
+    </Key>
+    <Property Name="IdVenta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="precio" Type="float" Nullable="false" />
+    <Property Name="observaciones" Type="nvarchar(max)" />
+    <Property Name="FechaVenta" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Grabado_Producto_productoidProducto">
+    <End Role="Producto" Type="Self.Producto" Multiplicity="0..1" />
+    <End Role="Grabado" Type="Self.Grabado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Producto">
+        <PropertyRef Name="idProducto" />
+      </Principal>
+      <Dependent Role="Grabado">
+        <PropertyRef Name="productoidProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Producto_Encargo_EncargoIdEncargo">
+    <End Role="Encargo" Type="Self.Encargo" Multiplicity="0..1" />
+    <End Role="Producto" Type="Self.Producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Encargo">
+        <PropertyRef Name="IdEncargo" />
+      </Principal>
+      <Dependent Role="Producto">
+        <PropertyRef Name="EncargoIdEncargo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Producto_Venta_VentaIdVenta">
+    <End Role="Venta" Type="Self.Venta" Multiplicity="0..1" />
+    <End Role="Producto" Type="Self.Producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Venta">
+        <PropertyRef Name="IdVenta" />
+      </Principal>
+      <Dependent Role="Producto">
+        <PropertyRef Name="VentaIdVenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="JoyeriaDBStoreContainer">
+    <EntitySet Name="__EFMigrationsHistory" EntityType="Self.__EFMigrationsHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Encargo" EntityType="Self.Encargo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Factura" EntityType="Self.Factura" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Grabado" EntityType="Self.Grabado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Producto" EntityType="Self.Producto" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Venta" EntityType="Self.Venta" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Grabado_Producto_productoidProducto" Association="Self.FK_Grabado_Producto_productoidProducto">
+      <End Role="Producto" EntitySet="Producto" />
+      <End Role="Grabado" EntitySet="Grabado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Producto_Encargo_EncargoIdEncargo" Association="Self.FK_Producto_Encargo_EncargoIdEncargo">
+      <End Role="Encargo" EntitySet="Encargo" />
+      <End Role="Producto" EntitySet="Producto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Producto_Venta_VentaIdVenta" Association="Self.FK_Producto_Venta_VentaIdVenta">
+      <End Role="Venta" EntitySet="Venta" />
+      <End Role="Producto" EntitySet="Producto" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
