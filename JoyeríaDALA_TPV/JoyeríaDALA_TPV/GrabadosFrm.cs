@@ -86,7 +86,7 @@ namespace JoyeríaDALA_TPV
             }
         }
 
-        private async void AplicarFiltro()
+        private async Task AplicarFiltro()
         {
             string nombre = txtCalcular.Text;
             DateTime? fechaInicio = null;
@@ -103,7 +103,7 @@ namespace JoyeríaDALA_TPV
             }
 
             // Obtener los objetos Grabado que cumplen con el filtro
-            List<Grabado> grabadosFiltrados = ObtenerGrabadosFiltrados(nombre, fechaInicio, fechaFin);
+            List<Grabado> grabadosFiltrados = await ObtenerGrabadosFiltrados(nombre, fechaInicio, fechaFin);
 
             // Limpiar la lista actual de ListViewItem
             lvwGrabados.Items.Clear();
@@ -129,10 +129,10 @@ namespace JoyeríaDALA_TPV
             }
         }
 
-        private List<Grabado> ObtenerGrabadosFiltrados(string nombre, DateTime? fechaInicio, DateTime? fechaFin)
+        private async Task<List<Grabado>> ObtenerGrabadosFiltrados(string nombre, DateTime? fechaInicio, DateTime? fechaFin)
         {
             // Obtener todos los objetos Grabado (o desde tu origen de datos)
-            List<Grabado> todosLosGrabados = ObtenerGrabados().Result;
+            List<Grabado> todosLosGrabados = await ObtenerGrabados();
 
             // Aplicar el filtro en base a los valores proporcionados
             List<Grabado> grabadosFiltrados = todosLosGrabados;

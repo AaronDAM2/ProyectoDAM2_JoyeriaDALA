@@ -98,9 +98,9 @@ namespace JoyeriaDALA_EscritorioWinForms.Formularios
 
         }
 
-        private void AplicarFiltros()
+        private async void AplicarFiltros()
         {
-            productos = Herramientas.GetProductosAsync().Result;
+            productos = await Herramientas.GetProductosAsync();
             // Limpiar la lista de productos filtrados
             productosFiltrados.Clear();
 
@@ -224,6 +224,9 @@ namespace JoyeriaDALA_EscritorioWinForms.Formularios
 
         public async Task CargarSubtipos()
         {
+
+            if (cmbSubtipo.Items.Count != 0)
+                cmbSubtipo.Items.Clear();
             if (cmbTipo.SelectedItem == null || cmbTipo.SelectedItem == " ")
             {
                 return;
@@ -240,6 +243,8 @@ namespace JoyeriaDALA_EscritorioWinForms.Formularios
 
         public async Task CargarMarcas()
         {
+            if (cmbMarca.Items.Count != 0)
+                cmbMarca.Items.Clear(); 
             if (cmbTipo.SelectedItem == null || cmbTipo.SelectedItem == " ")
             {
                 return;

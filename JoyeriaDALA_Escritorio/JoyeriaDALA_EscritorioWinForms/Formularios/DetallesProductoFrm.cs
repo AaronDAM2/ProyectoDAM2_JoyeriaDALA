@@ -25,6 +25,7 @@ namespace JoyeriaDALA_EscritorioWinForms.Formularios
                 nuevo = true;
             }
             CargarTipos();
+            
             if (!nuevo)
             {
                 CargarDatos();
@@ -99,11 +100,41 @@ namespace JoyeriaDALA_EscritorioWinForms.Formularios
             }
         }
 
-        
+        public async Task CargarMateriales()
+        {
+            cmbMateriales.Items.Clear();
+            List<string> materiales = new List<string>();
+            materiales = await Herramientas.getMateriales();
+            foreach (string s in materiales)
+                cmbMateriales.Items.Add(s);
+        }
+
+        public async Task CargarTamanos()
+        {
+            cmbTamaños.Items.Clear();
+            List<string> tamanos = new List<string>();
+            tamanos = await Herramientas.getTamanos();
+            foreach (string s in tamanos)
+                cmbTamaños.Items.Add(s);
+        }
+
+        private bool ComprobarFormulario()
+        {
+            if(txtPrecio.Text==null||txtPrecio.Text.Length==0) return false;
+            if(cmbTipo.Text==null||cmbTipo.Text.Length==0) return false;
+            if(txtNombre.Text==null||txtNombre.Text.Length==0) return false;
+
+            return true;
+        }
       
 
         private async void btnAceptar_Click(object sender, EventArgs e)
         {
+            if (!ComprobarFormulario())
+            {
+                MessageBox.Show("Debes introducir al menos un nombre, un precio, un stock y un tipo para crear un producto");
+                return;
+            }
             double precio = 0;
             producto.nombre = txtNombre.Text;
             producto.stock = (int)numStock.Value;
@@ -172,9 +203,42 @@ namespace JoyeriaDALA_EscritorioWinForms.Formularios
             this.Close();
         }
 
-        private void cmbTipo_SelectedIndexChanged(object sender, EventArgs e)
+        private async void cmbTipo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            CargarSubtipos();
+            CargarMarcas();
+        }
+
+        private async void DetallesProductoFrm_Load(object sender, EventArgs e)
+        {
+             CargarTipos();
+            await CargarMateriales();
+            await CargarTamanos();
+        }
+
+        private void btnGenerarNombre_Click(object sender, EventArgs e)
+        {
+            string tipo=cmbTipo.Text;
+            string subtipo=null, marca=null, material=null, tamano=null;
+            if (cmbSubtipo.Text.Length != 0) {
+                   subtipo=cmbSubtipo.Text;
+                    }
+            if(cmbMateriales.Text.Length != 0)
+            {
+                material=cmbMateriales.Text;
+            }
+
+            if(cmbMarcas.Text.Length != 0)
+            {
+                marca=cmbMarcas.Text;
+            }
+            if(cmbTamaños.Text.Length != 0){
+                tamano = cmbTamaños.Text;
+            }
+            Producto p=new Producto(); p.tipoProducto = tipo; p.subtipo=subtipo; p.marca=marca; p.material=material; p.tamano=tamano;
+            string nombre = Herramientas.NombreProducto(p);
+            producto.nombre=nombre;
+            txtNombre.Text=nombre;
         }
     }
 }

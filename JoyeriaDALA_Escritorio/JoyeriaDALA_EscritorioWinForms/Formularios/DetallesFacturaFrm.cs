@@ -155,6 +155,22 @@ namespace JoyeriaDALA_EscritorioWinForms.Formularios
             }
         }
 
+        private bool ComprobarFormulario()
+        {
+            if (txtCliente.Text == null || txtCliente.Text.Length == 0) return false;
+            if (txtDireccion.Text==null|| txtDireccion.Text.Length == 0) return false;
+            if(txtDomicilio.Text==null||txtDomicilio.Text.Length == 0) return false;
+            if(txtNIF.Text==null||txtNIF.Text.Length == 0) return false;
+            if (txtSubtotal == null || txtSubtotal.Text.Length == 0) return false;
+            if(lvwItems.Items==null||lvwItems.Items.Count == 0) return false;
+            if(itemsFactura==null||itemsFactura.Count == 0) return false;
+            if (dtpFactura.Value == null || dtpFactura.Value > dtpVencimiento.Value || dtpVencimiento.Value < DateTime.Now) return false;
+            if(cmbPago.Text==null||cmbPago.Items.Count == 0) return false;
+
+            return true;
+        }
+
+
         private void nuevoGrabadoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Grabado grabado = new Grabado();
@@ -250,7 +266,8 @@ namespace JoyeriaDALA_EscritorioWinForms.Formularios
 
         private async void btnAceptar_Click(object sender, EventArgs e)
         {
-            if (txtCliente.Text.Length > 0 && txtDireccion.Text.Length > 0 && txtNIF.Text.Length > 0 && dtpFactura.Value != null && dtpVencimiento.Value != null && cmbPago.Text.Length > 0)
+           
+            if (ComprobarFormulario())
             {
                 if (dtpVencimiento.Value < DateTime.Now || dtpVencimiento.Value < dtpFactura.Value)
                 {

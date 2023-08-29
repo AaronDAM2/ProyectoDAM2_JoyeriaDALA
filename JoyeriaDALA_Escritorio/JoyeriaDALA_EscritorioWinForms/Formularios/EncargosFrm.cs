@@ -89,7 +89,7 @@ namespace JoyeriaDALA_EscritorioWinForms.Formularios
             }
         }
 
-        private async void AplicarFiltro()
+        private async Task AplicarFiltro()
         {
             string nombre = txtFiltro.Text;
             DateTime? fechaInicio = null;
@@ -106,7 +106,7 @@ namespace JoyeriaDALA_EscritorioWinForms.Formularios
             }
 
             // Obtener los objetos Encargo que cumplen con el filtro
-            List<Encargo> encargosFiltrados = ObtenerEncargosFiltrados(nombre, fechaInicio, fechaFin);
+            List<Encargo> encargosFiltrados = await ObtenerEncargosFiltrados(nombre, fechaInicio, fechaFin);
 
             // Limpiar la lista actual de ListViewItem
             lvwEncargos.Items.Clear();
@@ -147,10 +147,10 @@ namespace JoyeriaDALA_EscritorioWinForms.Formularios
             }
         }
 
-        private List<Encargo> ObtenerEncargosFiltrados(string nombre, DateTime? fechaInicio, DateTime? fechaFin)
+        private async Task<List<Encargo>> ObtenerEncargosFiltrados(string nombre, DateTime? fechaInicio, DateTime? fechaFin)
         {
             // Obtener todos los objetos Encargo (o desde tu origen de datos)
-            List<Encargo> todosLosEncargos = ObtenerEncargos().Result;
+            List<Encargo> todosLosEncargos = await ObtenerEncargos();
 
             // Aplicar el filtro en base a los valores proporcionados
             List<Encargo> encargosFiltrados = todosLosEncargos;
@@ -173,7 +173,7 @@ namespace JoyeriaDALA_EscritorioWinForms.Formularios
             return encargosFiltrados;
         }
 
-        private void nuevoEncargoToolStripMenuItem_Click(object sender, EventArgs e)
+        private async void nuevoEncargoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Encargo nuevo=new Encargo();
             DetallesEncargoFrm crearEncargo = new DetallesEncargoFrm(nuevo);
@@ -183,12 +183,12 @@ namespace JoyeriaDALA_EscritorioWinForms.Formularios
                
                
                 crearEncargo.Close();
-                AplicarFiltro();
+              await  AplicarFiltro();
 
             }
         }
 
-        private async void modificarEncargoToolStripMenuItem_Click(object sender, EventArgs e)
+        private async Task modificarEncargoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if(lvwEncargos.SelectedItems.Count ==1)
             {
@@ -200,7 +200,7 @@ namespace JoyeriaDALA_EscritorioWinForms.Formularios
                     {
                         encargo=editar.DevolverEncargo();
                         editar.Close();
-                        AplicarFiltro();
+                        await AplicarFiltro();
                     }
                 }
             }

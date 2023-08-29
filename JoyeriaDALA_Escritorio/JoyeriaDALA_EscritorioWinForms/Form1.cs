@@ -85,7 +85,7 @@ namespace JoyeriaDALA_EscritorioWinForms
 
         private void btnInventario_Click(object sender, EventArgs e)
         {
-            if (this.LimpiarFormularios())
+            if (LimpiarFormularios())
             {
                 MdiParentFrm frm = new MdiParentFrm();
                 frm.ShowDialog();
@@ -94,15 +94,16 @@ namespace JoyeriaDALA_EscritorioWinForms
                 form.Dock = DockStyle.Fill;
                 form.Anchor = AnchorStyles.Top;
                 frm.Show();
-                form.Show();
                 this.Close();
+                form.Show();
+                
             }
 
         }
 
         private void btnVentas_Click(object sender, EventArgs e)
         {
-            if (this.LimpiarFormularios())
+            if (LimpiarFormularios())
             {
                 MdiParentFrm frm = new MdiParentFrm();
                 frm.ShowDialog();
@@ -150,7 +151,7 @@ namespace JoyeriaDALA_EscritorioWinForms
 
         private void btnFacturas_Click(object sender, EventArgs e)
         {
-            if (this.LimpiarFormularios())
+            if (LimpiarFormularios())
             {
                 MdiParentFrm frm = new MdiParentFrm();
                 frm.ShowDialog();

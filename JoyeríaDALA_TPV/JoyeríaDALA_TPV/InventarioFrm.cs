@@ -100,9 +100,9 @@ namespace JoyeríaDALA_TPV
 
         }
 
-        private void AplicarFiltros()
+        private async Task AplicarFiltros()
         {
-            productos = Herramientas.GetProductosAsync().Result;
+            productos = await Herramientas.GetProductosAsync();
             // Limpiar la lista de productos filtrados
             productosFiltrados.Clear();
 
@@ -173,9 +173,9 @@ namespace JoyeríaDALA_TPV
             }
         }
        
-        private void btnBuscar_Click(object sender, EventArgs e)
+        private async void btnBuscar_Click(object sender, EventArgs e)
         {
-            AplicarFiltros();
+            await AplicarFiltros();
         }
 
         public async Task CargarTipos()

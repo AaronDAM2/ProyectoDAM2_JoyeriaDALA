@@ -154,12 +154,12 @@ namespace JoyeríaDALA_TPV
 
         private async void btnNuevoEncargo_Click(object sender, EventArgs e)
         {
-            if (txtCalcular.Text != "" & txtCalcular.Text != "0" && txtProducto.Text != null && txtProducto.Text != "")
+            if (txtCalcular.Text != "" & txtCalcular.Text != "0" && txtProducto.Text != null)
             {
                 if (double.TryParse(txtCalcular.Text, out double precioFinal))
                 {
                     precio = precioFinal;
-                    if (producto != null)
+                    if (txtProducto.Text!=null&&txtProducto.Text.Length!=0&&producto != null)
                         grabado.productoidProducto = producto.idProducto;
                     venta.FechaVenta = dtpInicio.Value;
                     grabado.FechaInicio = dtpInicio.Value;

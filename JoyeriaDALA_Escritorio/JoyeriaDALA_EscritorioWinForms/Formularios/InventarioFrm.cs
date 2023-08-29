@@ -125,9 +125,9 @@ namespace JoyeriaDALA_EscritorioWinForms.Formularios
 
         }
 
-        private void AplicarFiltros()
+        private async void AplicarFiltros()
         {
-            productos = Herramientas.GetProductosAsync().Result;
+            productos = await Herramientas.GetProductosAsync() ;
             // Limpiar la lista de productos filtrados
             productosFiltrados.Clear();
 
@@ -214,6 +214,8 @@ namespace JoyeriaDALA_EscritorioWinForms.Formularios
                 crear.Close();
             }
 
+           
+
         }
 
         private async void editarProductoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -235,6 +237,8 @@ namespace JoyeriaDALA_EscritorioWinForms.Formularios
             }
             else
                 MessageBox.Show("Selecciona un producto");
+
+            AplicarFiltros();
         }
 
         private async void borrarProductoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -290,6 +294,8 @@ namespace JoyeriaDALA_EscritorioWinForms.Formularios
             }
             else
                 MessageBox.Show("Selecciona un producto");
+
+            AplicarFiltros();
         }
 
         private async void cambiarStockToolStripMenuItem_Click(object sender, EventArgs e)
@@ -326,7 +332,7 @@ namespace JoyeriaDALA_EscritorioWinForms.Formularios
             string salida;
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.Title = "Seleccionar ruta de excel";
-            ofd.Filter = "xlsx";
+            ofd.Filter = "*Archivos de Excel|*.xlsx";
             if(ofd.ShowDialog() == DialogResult.OK) { 
                 salida = ofd.FileName;
               await  Herramientas.ExportarProductos(salida);
@@ -341,6 +347,8 @@ namespace JoyeriaDALA_EscritorioWinForms.Formularios
         }
         public async Task CargarSubtipos()
         {
+            if (cmbSubtipo.Items.Count != 0)
+                cmbSubtipo.Items.Clear();
             if (cmbTipo.SelectedItem == null || cmbTipo.SelectedItem == " ")
             {
                 return;
@@ -357,6 +365,8 @@ namespace JoyeriaDALA_EscritorioWinForms.Formularios
 
         public async Task CargarMarcas()
         {
+            if(cmbMarca.Items.Count != 0)
+                cmbMarca.Items.Clear();
             if (cmbTipo.SelectedItem == null || cmbTipo.SelectedItem == " ")
             {
                 return;

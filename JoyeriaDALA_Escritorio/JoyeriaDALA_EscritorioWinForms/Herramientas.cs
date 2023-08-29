@@ -163,7 +163,7 @@ namespace JoyeriaDALA_EscritorioWinForms
         public static async Task<Producto> CreateProductoAsync(Producto producto)
         {
             Negocio negocio = new Negocio();
-            Producto createdProducto = await negocio.PostAsync<Producto>("api/Productos", producto, "apikey");
+            Producto createdProducto = await negocio.PostAsync<Producto>("api/Productos/postProducto", producto, "apikey");
             return createdProducto;
         }
 

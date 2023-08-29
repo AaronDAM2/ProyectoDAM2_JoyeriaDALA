@@ -102,8 +102,19 @@ namespace JoyeriaDALA_EscritorioWinForms.Formularios
             }
         }
 
+        private bool ComprobarFormulario()
+        {
+            if(txtTitulo==null||txtTitulo.Text.Length==0) return false;
+            if(txtDescripcion==null||txtDescripcion.Text.Length==0) return false;
+            if(dtpInicio.Value==null||dtpInicio.Value>dtpFin.Value||dtpFin.Value<DateTime.Now) return false;
+            return true;
+        }
         private async void btnAceptar_Click(object sender, EventArgs e)
         {
+            if (!ComprobarFormulario())
+            {
+                MessageBox.Show("Introduce todos los datos para continuar");
+            }
            notif.titulo=txtTitulo.Text;
             notif.descripción = txtTitulo.Text;
             notif.fechaInicio = dtpInicio.Value;

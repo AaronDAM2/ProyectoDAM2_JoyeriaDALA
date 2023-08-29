@@ -59,7 +59,7 @@ namespace JoyeriaDALA_EscritorioWinForms
             {
                 var json = JsonConvert.SerializeObject(objeto);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
-                content.Headers.Add("key", apikey);
+               // content.Headers.Add("key", apikey);
 
                 var response = await _httpClient.PostAsync($"{url}/{endpoint}", content);
 

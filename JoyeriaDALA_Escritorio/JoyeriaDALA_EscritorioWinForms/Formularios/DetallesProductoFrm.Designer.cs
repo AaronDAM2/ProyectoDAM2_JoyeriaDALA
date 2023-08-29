@@ -81,6 +81,7 @@
             this.btnGenerarNombre.TabIndex = 25;
             this.btnGenerarNombre.Text = "Autogenerar";
             this.btnGenerarNombre.UseVisualStyleBackColor = true;
+            this.btnGenerarNombre.Click += new System.EventHandler(this.btnGenerarNombre_Click);
             // 
             // label2
             // 
@@ -290,6 +291,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(505, 532);
+            this.Controls.Add(this.cmbTipo);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txtDescripcion);
@@ -307,13 +309,13 @@
             this.Controls.Add(this.cmbTamaños);
             this.Controls.Add(this.cmbMateriales);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.cmbTipo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnGenerarNombre);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label1);
             this.Name = "DetallesProductoFrm";
             this.Text = "DetallesProductoFrm";
+            this.Load += new System.EventHandler(this.DetallesProductoFrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numStock)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

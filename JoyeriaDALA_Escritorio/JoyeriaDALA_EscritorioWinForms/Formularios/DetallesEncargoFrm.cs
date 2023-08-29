@@ -43,9 +43,26 @@ namespace JoyeriaDALA_EscritorioWinForms.Formularios
             }
         }
 
+        private bool ComprobarFormulario()
+        {
+            if (txtCliente.Text == null || txtCliente.Text.Length == 0) return false;
+            if (txtDescripcion.Text == null || txtDescripcion.Text.Length == 0) return false;
+            if (dtpInicio.Value > dtpFin.Value) return false;
+            if (dtpFin.Value < dtpFin.Value) return false;
+            if (dtpFin.Value < DateTime.Now) return false;
+            if (txtPrecio.Text == null || txtPrecio.Text.Length == 0) return false;
+
+            return true;
+
+        }
+
         private async void btnAceptar_Click(object sender, EventArgs e)
         {
-            
+            if (!ComprobarFormulario())
+            {
+                MessageBox.Show("El encargo debe tener cliente, descripción y precio. La fecha de inicio debe ser anterior a la de finalización si esta existe, y esta última debe ser posterior a la actual.");
+                return;
+            }
             if (nuevo)
             {
                 Double.TryParse(txtPrecio.Text, out double precio);

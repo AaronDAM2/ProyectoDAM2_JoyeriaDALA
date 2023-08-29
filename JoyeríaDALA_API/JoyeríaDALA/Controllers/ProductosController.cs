@@ -165,12 +165,12 @@ namespace JoyeríaDALA.Controllers
 
             // POST: api/Productos
             // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-            [HttpPost]
-        public async Task<ActionResult<Producto>> PostProducto([FromBody] string jsonProducto)
+            [HttpPost("postProducto")]
+        public async Task<ActionResult<Producto>> PostProducto([FromBody] Producto producto)
         {
             if (jsonProducto == null)
                 return null;
-            Producto producto = JsonConvert.DeserializeObject<Producto>(jsonProducto);
+            //Producto producto = JsonConvert.DeserializeObject<Producto>(jsonProducto.ToString());
 
             if (_context.Producto == null)
             {
