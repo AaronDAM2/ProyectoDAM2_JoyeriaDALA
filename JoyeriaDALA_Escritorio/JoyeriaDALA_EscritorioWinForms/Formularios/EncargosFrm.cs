@@ -188,24 +188,7 @@ namespace JoyeriaDALA_EscritorioWinForms.Formularios
             }
         }
 
-        private async Task modificarEncargoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if(lvwEncargos.SelectedItems.Count ==1)
-            {
-                Encargo encargo = await Herramientas.GetEncargoAsync((int)lvwEncargos.SelectedItems[0].Tag);
-                if (encargo != null)
-                {
-                    DetallesEncargoFrm editar = new DetallesEncargoFrm(encargo);
-                    if(editar.ShowDialog() == DialogResult.OK)
-                    {
-                        encargo=editar.DevolverEncargo();
-                        editar.Close();
-                        await AplicarFiltro();
-                    }
-                }
-            }
-            else { MessageBox.Show("Selecciona un encargo"); }
-        }
+    
 
         private async void borrarEncargoToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -300,6 +283,25 @@ namespace JoyeriaDALA_EscritorioWinForms.Formularios
         {
             await ObtenerEncargos();
             await ActualizarListaAsync();
+        }
+
+        private async void modificarEncargoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (lvwEncargos.SelectedItems.Count == 1)
+            {
+                Encargo encargo = await Herramientas.GetEncargoAsync((int)lvwEncargos.SelectedItems[0].Tag);
+                if (encargo != null)
+                {
+                    DetallesEncargoFrm editar = new DetallesEncargoFrm(encargo);
+                    if (editar.ShowDialog() == DialogResult.OK)
+                    {
+                        encargo = editar.DevolverEncargo();
+                        editar.Close();
+                        await AplicarFiltro();
+                    }
+                }
+            }
+            else { MessageBox.Show("Selecciona un encargo"); }
         }
     }
 }

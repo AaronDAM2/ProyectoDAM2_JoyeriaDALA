@@ -48,15 +48,15 @@
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.nuevoEncargoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarEncargoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.borrarEncargoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.terminarEncargoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.duplicarEncargoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.generarVerFacturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.modificarEncargoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -223,17 +223,57 @@
             this.toolStripSeparator2,
             this.generarVerFacturaToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(172, 148);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 170);
+            // 
+            // nuevoEncargoToolStripMenuItem
+            // 
+            this.nuevoEncargoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("nuevoEncargoToolStripMenuItem.Image")));
+            this.nuevoEncargoToolStripMenuItem.Name = "nuevoEncargoToolStripMenuItem";
+            this.nuevoEncargoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nuevoEncargoToolStripMenuItem.Text = "Nuevo Encargo";
+            this.nuevoEncargoToolStripMenuItem.Click += new System.EventHandler(this.nuevoEncargoToolStripMenuItem_Click);
+            // 
+            // borrarEncargoToolStripMenuItem
+            // 
+            this.borrarEncargoToolStripMenuItem.Image = global::JoyeriaDALA_EscritorioWinForms.Properties.Resources.garbage_can_16xMD;
+            this.borrarEncargoToolStripMenuItem.Name = "borrarEncargoToolStripMenuItem";
+            this.borrarEncargoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.borrarEncargoToolStripMenuItem.Text = "Borrar Encargo";
+            this.borrarEncargoToolStripMenuItem.Click += new System.EventHandler(this.borrarEncargoToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(168, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            // 
+            // terminarEncargoToolStripMenuItem
+            // 
+            this.terminarEncargoToolStripMenuItem.Image = global::JoyeriaDALA_EscritorioWinForms.Properties.Resources.CheckBox_669;
+            this.terminarEncargoToolStripMenuItem.Name = "terminarEncargoToolStripMenuItem";
+            this.terminarEncargoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.terminarEncargoToolStripMenuItem.Text = "Terminar Encargo";
+            this.terminarEncargoToolStripMenuItem.Click += new System.EventHandler(this.terminarEncargoToolStripMenuItem_Click);
+            // 
+            // duplicarEncargoToolStripMenuItem
+            // 
+            this.duplicarEncargoToolStripMenuItem.Image = global::JoyeriaDALA_EscritorioWinForms.Properties.Resources.Copy_6524;
+            this.duplicarEncargoToolStripMenuItem.Name = "duplicarEncargoToolStripMenuItem";
+            this.duplicarEncargoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.duplicarEncargoToolStripMenuItem.Text = "Duplicar Encargo";
+            this.duplicarEncargoToolStripMenuItem.Click += new System.EventHandler(this.duplicarEncargoToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(168, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            // 
+            // generarVerFacturaToolStripMenuItem
+            // 
+            this.generarVerFacturaToolStripMenuItem.Image = global::JoyeriaDALA_EscritorioWinForms.Properties.Resources.document_16xLG;
+            this.generarVerFacturaToolStripMenuItem.Name = "generarVerFacturaToolStripMenuItem";
+            this.generarVerFacturaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.generarVerFacturaToolStripMenuItem.Text = "Generar Factura";
+            this.generarVerFacturaToolStripMenuItem.Click += new System.EventHandler(this.generarVerFacturaToolStripMenuItem_Click);
             // 
             // imageList1
             // 
@@ -269,53 +309,13 @@
             this.imageList1.Images.SetKeyName(27, "Undo_16x.png");
             this.imageList1.Images.SetKeyName(28, "wrench_16xMD.png");
             // 
-            // nuevoEncargoToolStripMenuItem
-            // 
-            this.nuevoEncargoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("nuevoEncargoToolStripMenuItem.Image")));
-            this.nuevoEncargoToolStripMenuItem.Name = "nuevoEncargoToolStripMenuItem";
-            this.nuevoEncargoToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.nuevoEncargoToolStripMenuItem.Text = "Nuevo Encargo";
-            this.nuevoEncargoToolStripMenuItem.Click += new System.EventHandler(this.nuevoEncargoToolStripMenuItem_Click);
-            // 
             // modificarEncargoToolStripMenuItem
             // 
             this.modificarEncargoToolStripMenuItem.Image = global::JoyeriaDALA_EscritorioWinForms.Properties.Resources.action_Edit_16xMD;
             this.modificarEncargoToolStripMenuItem.Name = "modificarEncargoToolStripMenuItem";
-            this.modificarEncargoToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.modificarEncargoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.modificarEncargoToolStripMenuItem.Text = "Modificar Encargo";
             this.modificarEncargoToolStripMenuItem.Click += new System.EventHandler(this.modificarEncargoToolStripMenuItem_Click);
-            // 
-            // borrarEncargoToolStripMenuItem
-            // 
-            this.borrarEncargoToolStripMenuItem.Image = global::JoyeriaDALA_EscritorioWinForms.Properties.Resources.garbage_can_16xMD;
-            this.borrarEncargoToolStripMenuItem.Name = "borrarEncargoToolStripMenuItem";
-            this.borrarEncargoToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.borrarEncargoToolStripMenuItem.Text = "Borrar Encargo";
-            this.borrarEncargoToolStripMenuItem.Click += new System.EventHandler(this.borrarEncargoToolStripMenuItem_Click);
-            // 
-            // terminarEncargoToolStripMenuItem
-            // 
-            this.terminarEncargoToolStripMenuItem.Image = global::JoyeriaDALA_EscritorioWinForms.Properties.Resources.CheckBox_669;
-            this.terminarEncargoToolStripMenuItem.Name = "terminarEncargoToolStripMenuItem";
-            this.terminarEncargoToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.terminarEncargoToolStripMenuItem.Text = "Terminar Encargo";
-            this.terminarEncargoToolStripMenuItem.Click += new System.EventHandler(this.terminarEncargoToolStripMenuItem_Click);
-            // 
-            // duplicarEncargoToolStripMenuItem
-            // 
-            this.duplicarEncargoToolStripMenuItem.Image = global::JoyeriaDALA_EscritorioWinForms.Properties.Resources.Copy_6524;
-            this.duplicarEncargoToolStripMenuItem.Name = "duplicarEncargoToolStripMenuItem";
-            this.duplicarEncargoToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.duplicarEncargoToolStripMenuItem.Text = "Duplicar Encargo";
-            this.duplicarEncargoToolStripMenuItem.Click += new System.EventHandler(this.duplicarEncargoToolStripMenuItem_Click);
-            // 
-            // generarVerFacturaToolStripMenuItem
-            // 
-            this.generarVerFacturaToolStripMenuItem.Image = global::JoyeriaDALA_EscritorioWinForms.Properties.Resources.document_16xLG;
-            this.generarVerFacturaToolStripMenuItem.Name = "generarVerFacturaToolStripMenuItem";
-            this.generarVerFacturaToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
-            this.generarVerFacturaToolStripMenuItem.Text = "Generar Factura";
-            this.generarVerFacturaToolStripMenuItem.Click += new System.EventHandler(this.generarVerFacturaToolStripMenuItem_Click);
             // 
             // EncargosFrm
             // 
@@ -357,7 +357,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem nuevoEncargoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modificarEncargoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem terminarEncargoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem borrarEncargoToolStripMenuItem;
         private System.Windows.Forms.ImageList imageList1;
@@ -365,5 +364,6 @@
         private System.Windows.Forms.ToolStripMenuItem duplicarEncargoToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem generarVerFacturaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modificarEncargoToolStripMenuItem;
     }
 }

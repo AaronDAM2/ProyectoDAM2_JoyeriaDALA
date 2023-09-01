@@ -161,17 +161,7 @@ namespace JoyeriaDALA_EscritorioWinForms.Formularios
             return facturasFiltrados;
         }
 
-        private async Task nuevaFacturaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Factura f=new Factura();
-            DetallesFacturaFrm nueva = new DetallesFacturaFrm(f);
-            if (nueva.ShowDialog() == DialogResult.OK)
-            {
-                f = nueva.DevolverFactura();
-                nueva.Close();
-                await AplicarFiltro();
-            }
-        }
+     
 
         private async void verFacturaToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -214,6 +204,18 @@ namespace JoyeriaDALA_EscritorioWinForms.Formularios
             else
             {
                 MessageBox.Show("Selecciona una factura");
+            }
+        }
+
+        private async void nuevaFacturaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Factura f = new Factura();
+            DetallesFacturaFrm nueva = new DetallesFacturaFrm(f);
+            if (nueva.ShowDialog() == DialogResult.OK)
+            {
+                f = nueva.DevolverFactura();
+                nueva.Close();
+                await AplicarFiltro();
             }
         }
     }
