@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sSbOmBtObyupk85FJqE3eesvOiKbDvIHBYN7Xqn3sbGx6e97wsv8edzJ0o0xG5NRSG8CXsBsUYqUsWl0rVe6yw==",
+  "dgSpecHash": "5kqQuOW6bm+/NDiP7hWXt0WgBAQkbVQxc8gecHhCgdERP5iIoh0QrWpsRl50iQ/yobwOBX0wP9JD0G3diymB+Q==",
   "success": true,
-  "projectFilePath": "D:\\(0)TFG\\JoyeríaDALA_TPV\\Instalador\\Instalador.wapproj",
+  "projectFilePath": "C:\\Git\\ProyectoDAM2_JoyeriaDALA\\JoyeríaDALA_TPV\\Instalador\\Instalador.wapproj",
   "expectedPackageFiles": [
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages\\microsoft.windows.sdk.buildtools\\10.0.22621.756\\microsoft.windows.sdk.buildtools.10.0.22621.756.nupkg.sha512"
   ],

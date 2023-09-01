@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WlwpnTmUvkchRLCn/dKi11tRrlVfQffN/PIRkcPebK/akZK031UQ2rgsq9T7R+is5CACYJGSI77kUejj9vM8IQ==",
+  "dgSpecHash": "pyDc3Mgmw1ww9ujS8hM+BdSeGebEkLL1EaJqgvfEB4gQ0+DAzooj4g2qEAodj9MRg1Cahymi/42jXFKw/AqEMg==",
   "success": true,
-  "projectFilePath": "D:\\(0)TFG\\JoyeríaDALA\\JoyeríaDALA\\JoyeríaDALA.csproj",
+  "projectFilePath": "C:\\Git\\ProyectoDAM2_JoyeriaDALA\\JoyeríaDALA_API\\JoyeríaDALA\\JoyeríaDALA.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuario\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

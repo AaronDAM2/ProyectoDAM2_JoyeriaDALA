@@ -168,8 +168,8 @@ namespace JoyeríaDALA.Controllers
             [HttpPost("postProducto")]
         public async Task<ActionResult<Producto>> PostProducto([FromBody] Producto producto)
         {
-            if (jsonProducto == null)
-                return null;
+           /* if (jsonProducto == null)
+                return null;*/
             //Producto producto = JsonConvert.DeserializeObject<Producto>(jsonProducto.ToString());
 
             if (_context.Producto == null)

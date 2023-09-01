@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\(0)TFG\\JoyeríaDALA\\JoyeríaDALA\\JoyeríaDALA.csproj": {}
+    "C:\\Git\\ProyectoDAM2_JoyeriaDALA\\JoyeríaDALA_API\\JoyeríaDALA\\JoyeríaDALA.csproj": {}
   },
   "projects": {
-    "D:\\(0)TFG\\JoyeríaDALA\\JoyeríaDALA\\JoyeríaDALA.csproj": {
+    "C:\\Git\\ProyectoDAM2_JoyeriaDALA\\JoyeríaDALA_API\\JoyeríaDALA\\JoyeríaDALA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\(0)TFG\\JoyeríaDALA\\JoyeríaDALA\\JoyeríaDALA.csproj",
+        "projectUniqueName": "C:\\Git\\ProyectoDAM2_JoyeriaDALA\\JoyeríaDALA_API\\JoyeríaDALA\\JoyeríaDALA.csproj",
         "projectName": "JoyeríaDALA",
-        "projectPath": "D:\\(0)TFG\\JoyeríaDALA\\JoyeríaDALA\\JoyeríaDALA.csproj",
+        "projectPath": "C:\\Git\\ProyectoDAM2_JoyeriaDALA\\JoyeríaDALA_API\\JoyeríaDALA\\JoyeríaDALA.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "D:\\(0)TFG\\JoyeríaDALA\\JoyeríaDALA\\obj\\",
+        "outputPath": "C:\\Git\\ProyectoDAM2_JoyeriaDALA\\JoyeríaDALA_API\\JoyeríaDALA\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
