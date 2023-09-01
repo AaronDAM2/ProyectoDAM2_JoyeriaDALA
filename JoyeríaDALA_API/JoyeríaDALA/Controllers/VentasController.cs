@@ -78,12 +78,9 @@ namespace JoyeríaDALA.Controllers
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
 
-        public async Task<IActionResult> PutVenta(int id, [FromBody]string jsonVenta)
+        public async Task<IActionResult> PutVenta(int id, [FromBody]Venta venta)
         {
-            if(jsonVenta== null)
-                return BadRequest(string.Empty);
-
-            Venta venta = JsonConvert.DeserializeObject<Venta>(jsonVenta);
+        
 
             if (id != venta.IdVenta)
             {

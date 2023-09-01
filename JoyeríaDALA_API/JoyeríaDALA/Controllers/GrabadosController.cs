@@ -54,12 +54,9 @@ namespace JoyeríaDALA.Controllers
         // PUT: api/Grabados/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutGrabado(int id, [FromBody] string jsonGrabado)
+        public async Task<IActionResult> PutGrabado(int id, [FromBody] Grabado grabado)
         {
-            if (jsonGrabado == null)
-                return BadRequest(string.Empty);
-
-            Grabado grabado = JsonConvert.DeserializeObject<Grabado>(jsonGrabado);
+         
 
             if (id != grabado.IdGrabado)
             {
@@ -90,11 +87,9 @@ namespace JoyeríaDALA.Controllers
         // POST: api/Grabados
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Grabado>> PostGrabado([FromBody] string jsonGrabado)
+        public async Task<ActionResult<Grabado>> PostGrabado([FromBody] Grabado grabado)
         {
-            if (jsonGrabado == null)
-                return null;
-            Grabado grabado = JsonConvert.DeserializeObject<Grabado>(jsonGrabado);
+       
 
             if (_context.Grabado == null)
             {

@@ -54,12 +54,9 @@ namespace JoyeríaDALA.Controllers
         // PUT: api/Encargos/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutEncargo(int id, [FromBody] string jsonEncargo)
+        public async Task<IActionResult> PutEncargo(int id, [FromBody] Encargo encargo)
         {
-            if (jsonEncargo == null)
-                return BadRequest(string.Empty);
-
-            Encargo encargo = JsonConvert.DeserializeObject<Encargo>(jsonEncargo);
+        
 
             if (id != encargo.IdEncargo)
             {
@@ -91,11 +88,9 @@ namespace JoyeríaDALA.Controllers
         // POST: api/Encargos
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Encargo>> PostEncargo([FromBody] string jsonEncargo)
+        public async Task<ActionResult<Encargo>> PostEncargo([FromBody] Encargo encargo)
         {
-            if (jsonEncargo == null)
-                return null;
-            Encargo encargo = JsonConvert.DeserializeObject<Encargo>(jsonEncargo);
+           
 
             if (_context.Encargo == null)
             {

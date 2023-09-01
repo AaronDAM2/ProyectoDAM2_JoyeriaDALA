@@ -45,10 +45,10 @@
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.nuevaFacturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verFacturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.imprimirFacturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nuevaFacturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
@@ -153,6 +153,7 @@
             this.columnHeader3,
             this.columnHeader5,
             this.columnHeader6});
+            this.lvwFacturas.ContextMenuStrip = this.contextMenuStrip1;
             this.lvwFacturas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lvwFacturas.FullRowSelect = true;
             this.lvwFacturas.GridLines = true;
@@ -197,36 +198,36 @@
             this.toolStripSeparator1,
             this.imprimirFacturaToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 98);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(163, 76);
+            // 
+            // nuevaFacturaToolStripMenuItem
+            // 
+            this.nuevaFacturaToolStripMenuItem.Image = global::JoyeriaDALA_EscritorioWinForms.Properties.Resources.action_add_16xMD;
+            this.nuevaFacturaToolStripMenuItem.Name = "nuevaFacturaToolStripMenuItem";
+            this.nuevaFacturaToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.nuevaFacturaToolStripMenuItem.Text = "Nueva Factura";
+            this.nuevaFacturaToolStripMenuItem.Click += new System.EventHandler(this.nuevaFacturaToolStripMenuItem_Click);
             // 
             // verFacturaToolStripMenuItem
             // 
             this.verFacturaToolStripMenuItem.Image = global::JoyeriaDALA_EscritorioWinForms.Properties.Resources.action_Edit_16xMD;
             this.verFacturaToolStripMenuItem.Name = "verFacturaToolStripMenuItem";
-            this.verFacturaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.verFacturaToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.verFacturaToolStripMenuItem.Text = "Ver Factura";
             this.verFacturaToolStripMenuItem.Click += new System.EventHandler(this.verFacturaToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(159, 6);
             // 
             // imprimirFacturaToolStripMenuItem
             // 
             this.imprimirFacturaToolStripMenuItem.Image = global::JoyeriaDALA_EscritorioWinForms.Properties.Resources.document_16xLG1;
             this.imprimirFacturaToolStripMenuItem.Name = "imprimirFacturaToolStripMenuItem";
-            this.imprimirFacturaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.imprimirFacturaToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
             this.imprimirFacturaToolStripMenuItem.Text = "Imprimir Factura";
             this.imprimirFacturaToolStripMenuItem.Click += new System.EventHandler(this.imprimirFacturaToolStripMenuItem_Click);
-            // 
-            // nuevaFacturaToolStripMenuItem
-            // 
-            this.nuevaFacturaToolStripMenuItem.Image = global::JoyeriaDALA_EscritorioWinForms.Properties.Resources.action_add_16xMD;
-            this.nuevaFacturaToolStripMenuItem.Name = "nuevaFacturaToolStripMenuItem";
-            this.nuevaFacturaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.nuevaFacturaToolStripMenuItem.Text = "Nueva Factura";
-            this.nuevaFacturaToolStripMenuItem.Click += new System.EventHandler(this.nuevaFacturaToolStripMenuItem_Click);
             // 
             // FacturasFrm
             // 

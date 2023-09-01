@@ -127,12 +127,9 @@ namespace JoyeríaDALA.Controllers
         // PUT: api/Productos/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutProducto(int id, [FromBody] string jsonProducto)
+        public async Task<IActionResult> PutProducto(int id, [FromBody] Producto producto)
         {
-            if (jsonProducto == null)
-                return BadRequest(string.Empty);
-
-            Producto producto = JsonConvert.DeserializeObject<Producto>(jsonProducto);
+         
 
             if (id != producto.idProducto)
             {

@@ -24,7 +24,11 @@ namespace JoyeriaDALA_EscritorioWinForms.Formularios
             this.grabado = grabado;
             venta = grabado.venta;
             if (grabado.IdGrabado == 0)
+            {
                 nuevo = true;
+                venta = new Venta();
+            }
+                
         }
 
         private void DetallesGrabadoFrm_Load(object sender, EventArgs e)
@@ -68,6 +72,7 @@ namespace JoyeriaDALA_EscritorioWinForms.Formularios
 
             if (nuevo)
             {
+                venta = new Venta();
                 Double.TryParse(txtPrecio.Text, out double precio);
                 grabado.precio = precio;
                 grabado.FechaInicio=dtpInicio.Value;

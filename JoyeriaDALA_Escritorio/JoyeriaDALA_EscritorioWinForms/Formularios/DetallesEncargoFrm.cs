@@ -21,9 +21,14 @@ namespace JoyeriaDALA_EscritorioWinForms.Formularios
         {
             InitializeComponent();
             this.encargo = encargo;
+            
             venta = encargo.venta;
             if (encargo.IdEncargo == 0)
+            {
                 nuevo = true;
+                venta=new Venta();
+            }
+               
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -65,6 +70,7 @@ namespace JoyeriaDALA_EscritorioWinForms.Formularios
             }
             if (nuevo)
             {
+                venta=new Venta();
                 Double.TryParse(txtPrecio.Text, out double precio);
                 encargo.precio = precio;
                 encargo.FechaInicio = dtpInicio.Value;
